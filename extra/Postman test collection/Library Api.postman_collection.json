@@ -1,0 +1,685 @@
+{
+	"info": {
+		"_postman_id": "f8780497-173c-4d63-9441-8c7813ba815e",
+		"name": "Library Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Store Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "book222",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "some description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1111",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "amr diab",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/books",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Index Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "libraryapi.build/api/books",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://libraryapi.build/api/books/1",
+							"protocol": "http",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "updated book",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "updated desc",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "updated amr diab",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "22222",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/books/22",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "libraryapi.build/api/books/22",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Index Reviews : of single book",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://libraryapi.build/api/books/1/reviews",
+							"protocol": "http",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Review",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://libraryapi.build/api/books/1/reviews/5",
+							"protocol": "http",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1",
+								"reviews",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "review",
+									"value": "some new review",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/books/1/reviews",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "review",
+									"value": "updated review content",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://libraryapi.build/api/books/1/reviews/61",
+							"protocol": "http",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1",
+								"reviews",
+								"61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjNWUyM2M4N2YzOTAzZjgwZDI3N2IyNjlkNWFhMmVlMGQ1NDBkM2VhZjY4ZWJjMjY1MWQwNjg5OTQ2ZTUyMGQ1OTg4OGM3YzRkYWRiMjZhIn0.eyJhdWQiOiIxIiwianRpIjoiNGM1ZTIzYzg3ZjM5MDNmODBkMjc3YjI2OWQ1YWEyZWUwZDU0MGQzZWFmNjhlYmMyNjUxZDA2ODk5NDZlNTIwZDU5ODg4YzdjNGRhZGIyNmEiLCJpYXQiOjE1NTMzOTY2MjcsIm5iZiI6MTU1MzM5NjYyNywiZXhwIjoxNTg1MDE5MDI3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.RWr6BenPaWSetrd64RIU8gZxXKCnXYDiCQIVnEyzRsAdGQnSbZsyLNHSuuLrZb-qdW4CW-BRS8Zxxhqa2SzVPAucDhSvFjS7dIDDmvlVueE2L9FU3cWkISFoE58lMNL-cFbxCgm5h27Yi_SQq0JY_YGXe5Rkr_FtbpzZ8y7Vv8494gc7eLSZ5uEsBjneELoiRPmSbknFjX2z-Wkx9wPVRp68N01MYFh02YNTlUdWHbd9rCzBFoGXTQxNQd1MS71wZBgGn3AWK_IS8gcFUw5bHqaAQ-octMWxSvf_FjCUTrUKdH763snRTQOGXJY_5QgZGqNlEbSIW1pfr1qH0ZSeWFBmsfaK3aCQKNscNqEk1Uut29UhAlKS3Eqtls026pI4CRRKoRefw11ZJasz7au_Vn4aCv1jL1BpA4nAo_vrvvYc77Dn34RwK7yDm7-5KAY3XWimxbeZPI5_AL3-li68vzFccNHan4z4BSuIv0gBgVvowG6aYz5atcXVNVk0m83rb9JCMRku6_nh8MtdAcN-d5Mv7exPB0lPQWi-yuzOFnvyokTmiINwS-BoBKOFPh1542ahjviLksK-lg8Nh989LSBHx_vNohTJa_FZ3OykguNX4t9PKzeyvui04lqzAmoHOVh4UoXTjUtBilGE9HkZg0Eofx1kTxXearBI8ZJeSKw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://libraryapi.build/api/books/1/reviews/61",
+							"protocol": "http",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"books",
+								"1",
+								"reviews",
+								"61"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "amroo",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "amr@amr.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01004044658",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/register",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjIxODk3YjBlM2YxYzAzMWU4OGNjZjdmMzBiOTNkZmI1ODQwNWY0MWEyZGYyNzk5MjI0ODlhZTU0NjgxNzlkZjQyYzIyMGM5MmMwNDYzYzc5In0.eyJhdWQiOiIxIiwianRpIjoiMjE4OTdiMGUzZjFjMDMxZTg4Y2NmN2YzMGI5M2RmYjU4NDA1ZjQxYTJkZjI3OTkyMjQ4OWFlNTQ2ODE3OWRmNDJjMjIwYzkyYzA0NjNjNzkiLCJpYXQiOjE1NTMyMzU0NjgsIm5iZiI6MTU1MzIzNTQ2OCwiZXhwIjoxNTg0ODU3ODY4LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.OjXi_Bphag3b7XJGWNOqnJ5JmeV8eb-nu0Ph7pK4vrKVMQKNYRbnnyKLZa03cRPCTbfD4gt_MwSjJ8FjDOy9JuoOJZs-xDTiSc5KLLoOKBK0ak9lixxP8OtJwEpURc6WMMQQyxoyd9HpxDpvELCbarzUZ0FYNqkoJhQscDowtJIDjMyMM-kvNr_ieB4w7_zVDVGc6EsJJpFF1CVpXAF1jDNwPJE-v9843NzPZVOgl1Y2qSs1B5ubY3c2ZgOMX-1f1LOmx-utJ8kzKZMYIztuJs-Dej4BCFhQ2gaRPUi3qUBq6RoxlQ5tumONBMyZZV0v8L0a8fXnYjzTq-FJTnxdiyXs4AjtSQH7QoculAZ7VMXg0CgGN9gb85Gpy_9DeQQtTV1GB9WsvOpaJ2DJn6IOMvYa5fLq_wnAI6fUkGwsQUTHEb0efZMzLqQ3fYKAN1wOTaLIHEKbwhLTpm71AOV9cbaTbKtDwR5oCi7P6K9TAH_gpi0-bu7F37yOiAfQdDgcwmBch-9WshRV-1wqGvwBKwM66p1qLmYVnr4D9Yyqkp0jgrIDSsiXBGHZ1Y7tCI4Lk98j_krXc-QWXEqdTw6GnodumG7RvuilBPToPweTskbF2re01EGwtcj3IN9OYXAom8HKOMXa7qhgfyofJW2DmYbXpCgjSQO-pVtG7TyViVg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "v_code",
+									"value": "6411",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/verify",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJmNDA1MTE3YmNiMzJlZDdlMjE5OTExMjgwNjZmZWIyNGU1NTRkN2U4NWIzMzk2MTFmNDZkNmE0ZWYxNmNlY2I5MDNiMTk5YWFjZDlhZDFmIn0.eyJhdWQiOiIxIiwianRpIjoiMmY0MDUxMTdiY2IzMmVkN2UyMTk5MTEyODA2NmZlYjI0ZTU1NGQ3ZTg1YjMzOTYxMWY0NmQ2YTRlZjE2Y2VjYjkwM2IxOTlhYWNkOWFkMWYiLCJpYXQiOjE1NTMyMzcxODcsIm5iZiI6MTU1MzIzNzE4NywiZXhwIjoxNTg0ODU5NTg3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.LI1OZYNCd6F23OtTU3I951Fw-pF9N-Ag4i8et-Vl_JBhctenJiBr59iN_0l7S5ipPZaNLMI2KrArwMpmd1MMMCBFunXWGzDXMzW80_NkcJXGtVq70SPXi3IKEfH1mQpyuXq7fTZFHcZmZNg0KSUnsvWbKlq3RfOpmGdRATgrIFAk0AffRVTG0Q_A83R2q6_qbwjTYARHt0kbD-Ixa7bD9fpJTVKFmTwzQim40oLEf9Yi1B6nzpkRQ2ZrdDKxcVf-BKfM6L2Vh_RHJN4ZvjTKKUyqgh9XIDzYhaNOsMozFnT_oKhrgp2E7Xt9dAY_q1axKHXKCJVaC3LDMqvDD_xJj4WCWsiUCdVa3_3EZLFnXh0gyCZVTk4-Wtz0l4glaIOce0A7TsJn2koR8QCqx2KzUIAjlxfxF-HbrgMydh8pmEklqZhq5sVYKhN-WvlTH6P6Hz3QOIOXJT3nrtfQW1YXwB9QQegW_LwdfSDSG1wXANIXKv8lPr83qpM51byTAy0T4V2IAy9vh7BFSrIMOAwFiYCwZTqZ4V0pZAIg2XH8pRBJDWMESFNodk7EAXDEiiHy0q9a4X7F6txuHwhBeVITwKy3pjTuJupj9muC3xiX4Y3qWcR_joWCmz86CslzmVNqHmsSlb1J54qmkfzdbx-JZJyX6ZOk37R-yQ6vh161yjY",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "libraryapi.build/api/logout",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJmNDA1MTE3YmNiMzJlZDdlMjE5OTExMjgwNjZmZWIyNGU1NTRkN2U4NWIzMzk2MTFmNDZkNmE0ZWYxNmNlY2I5MDNiMTk5YWFjZDlhZDFmIn0.eyJhdWQiOiIxIiwianRpIjoiMmY0MDUxMTdiY2IzMmVkN2UyMTk5MTEyODA2NmZlYjI0ZTU1NGQ3ZTg1YjMzOTYxMWY0NmQ2YTRlZjE2Y2VjYjkwM2IxOTlhYWNkOWFkMWYiLCJpYXQiOjE1NTMyMzcxODcsIm5iZiI6MTU1MzIzNzE4NywiZXhwIjoxNTg0ODU5NTg3LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.LI1OZYNCd6F23OtTU3I951Fw-pF9N-Ag4i8et-Vl_JBhctenJiBr59iN_0l7S5ipPZaNLMI2KrArwMpmd1MMMCBFunXWGzDXMzW80_NkcJXGtVq70SPXi3IKEfH1mQpyuXq7fTZFHcZmZNg0KSUnsvWbKlq3RfOpmGdRATgrIFAk0AffRVTG0Q_A83R2q6_qbwjTYARHt0kbD-Ixa7bD9fpJTVKFmTwzQim40oLEf9Yi1B6nzpkRQ2ZrdDKxcVf-BKfM6L2Vh_RHJN4ZvjTKKUyqgh9XIDzYhaNOsMozFnT_oKhrgp2E7Xt9dAY_q1axKHXKCJVaC3LDMqvDD_xJj4WCWsiUCdVa3_3EZLFnXh0gyCZVTk4-Wtz0l4glaIOce0A7TsJn2koR8QCqx2KzUIAjlxfxF-HbrgMydh8pmEklqZhq5sVYKhN-WvlTH6P6Hz3QOIOXJT3nrtfQW1YXwB9QQegW_LwdfSDSG1wXANIXKv8lPr83qpM51byTAy0T4V2IAy9vh7BFSrIMOAwFiYCwZTqZ4V0pZAIg2XH8pRBJDWMESFNodk7EAXDEiiHy0q9a4X7F6txuHwhBeVITwKy3pjTuJupj9muC3xiX4Y3qWcR_joWCmz86CslzmVNqHmsSlb1J54qmkfzdbx-JZJyX6ZOk37R-yQ6vh161yjY",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "libraryapi.build/api/details",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Auth",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ4YzM2ODBkNDZkMDc2OTk5ZGIzMzcxZWUxMjFjM2I5NGVhMjA0ZGY5NzAzZWY5MTk0MTdmNDQwZjQwYjA0ODYxMDI5NzcxMTg2ZWY4Yjk3In0.eyJhdWQiOiIxIiwianRpIjoiNDhjMzY4MGQ0NmQwNzY5OTlkYjMzNzFlZTEyMWMzYjk0ZWEyMDRkZjk3MDNlZjkxOTQxN2Y0NDBmNDBiMDQ4NjEwMjk3NzExODZlZjhiOTciLCJpYXQiOjE1NTMyMzUyNjAsIm5iZiI6MTU1MzIzNTI2MCwiZXhwIjoxNTg0ODU3NjYwLCJzdWIiOiIxMSIsInNjb3BlcyI6W119.2EpA8Vbd8DvlX1zvHcN9dMdACcbbcug-RXvQX0ZJsFBmqxT8J51eF5ArJSkPu3POdxHzHZeZdwQNxNmiqKP5E165rrJy_9RH13i10vmKik7BSl2s18ID97YoGLp1ToSOutHKT1G3X4KuUOJoHeVwCQ7jFxVw6CZgvt1DwtzjPvGptc3HzQiNaZUMyr6-638gflH3tZsVQomiMCv2WinhPHoHWH4ZX4EopujCLCX2QPM2nnQ3gPEYe60Qmr1Gr-UsBb3ynwCgioz8U2VGoBQ4xynZIxrRo-ok2bokLJEc59VVv7i1P-71CBXCRARYWCiPuKmnkJIDVJitfIIA5W_Q1h2hpv5lxDLfwdhypfBaavIDmF4-rvD4n1RreuRu51mT5JnfyQ0qrWC__756FglqssRM-QVj9MQ_mTwNEbqpj3YBHsmtBca4-THGD9ysbjgasYZebUTLVO1-JiYPhPfDWrKaEwl9CRq6TvaMjyx7sqzf3vy6MbQKgoEYyLeSsQut-7YCuEv6Zqo5VHWrNcYU-q8t8Zmq16BFlsjvra3WpMaHqntv80l6a6x6ZULFPpP8jAduTC8ngdxX4Gr5HAbNjcVIT776D0cfYsEP6izNXimbywZdW81xCfOmBp7Q6f5Ld4ObYCixfKLTKGQUNcpwvx-RS7fC282423Yh_XxDdnc",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01004044658",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "libraryapi.build/api/login",
+							"host": [
+								"libraryapi",
+								"build"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
