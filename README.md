@@ -29,6 +29,10 @@ Built on laravel 5.8
 - The website local url used is libraryapi.build (defined within Apatche vhosts & machine hosts) files.
 - Postman testing collection of the APIs is included (find it under extra/Postman test collection/Library Api.postman_collection.json).
 - Database sql file also included (find it under extra/Database/libraryapi.sql).
+- If you are going to do a migrate instead of using the provided database sql file, you gonna need to install Passport in order to get new keys
+```php
+php artisan passport:install
+```
 
 ## About me
 Junior PHP/Laravel web developer with unique vision and exceptional dedication.
