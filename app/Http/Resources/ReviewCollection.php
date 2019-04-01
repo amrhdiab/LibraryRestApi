@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+class ReviewCollection extends ResourceCollection
+{
+    /**
+     * Transform the resource collection into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'data' => $this->collection->transform(function ($review){
+                return [
+                    'review' => $review->review,
+                    'rating' => $review->rating,
+                    'userName' => $review->user->name,
+                    'href' => [
+                        'link' => route('reviews.show',[$review->book->id,$review->id])
+                    ]
+                ];
+            })
+        ];
+    }
+}
